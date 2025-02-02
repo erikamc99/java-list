@@ -62,18 +62,22 @@ public class WeekHandlerTest {
         assertThat(week.getSizeList(), is(6));    
     }
 
-/*
     @Test
     @DisplayName("Test para obtener un día específico día de la semana")
     public void testGetSpecificDay() {
         WeekHandler week = new WeekHandler();
-            
+        week.createList();
+
+        assertThat(week.getSpecificDay("Thursday"), is(equalTo("Thursday")));
+         
     }
 
+    /*
     @Test
     @DisplayName("Test para comprobar que existe un día concreto de la semana")
     public void testDayExists() {
         WeekHandler week = new WeekHandler();
+        week.createList();
             
     }
 
@@ -81,6 +85,7 @@ public class WeekHandlerTest {
     @DisplayName("Test para ordenar alfabéticamente la lista")
     public void testSortList() {
         WeekHandler week = new WeekHandler();
+        week.createList();
             
     }
 
@@ -88,6 +93,7 @@ public class WeekHandlerTest {
     @DisplayName("Test para vaciar la lista")
     public void testCleanList() {
         WeekHandler week = new WeekHandler();
+        week.createList();
             
     }
  */
