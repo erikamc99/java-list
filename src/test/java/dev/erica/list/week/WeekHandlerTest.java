@@ -72,15 +72,18 @@ public class WeekHandlerTest {
          
     }
 
-    /*
+
     @Test
     @DisplayName("Test para comprobar que existe un día concreto de la semana")
     public void testDayExists() {
         WeekHandler week = new WeekHandler();
         week.createList();
-            
+        
+        assertThat(week.dayExists("Sunday"), is(true));
+        asserThat(week.dayExists("Patata"), is(false));
     }
 
+/*
     @Test
     @DisplayName("Test para ordenar alfabéticamente la lista")
     public void testSortList() {
