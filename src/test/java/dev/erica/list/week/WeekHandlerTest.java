@@ -5,17 +5,17 @@
 
 package dev.erica.list.week;
 
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.hamcrest.Matchers.is;
-
 import java.util.List;
 
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.nullValue;
+import static org.junit.Assert.assertThat;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -70,7 +70,8 @@ public class WeekHandlerTest {
         WeekHandler week = new WeekHandler();
         week.createList();
 
-        assertThat(week.getSpecificDay("Thursday"), is(equalTo("Thursday")));  
+        assertThat(week.getSpecificDay("Thursday"), is(equalTo("Thursday")));
+        assertThat(week.getSpecificDay("Patata"), is(nullValue()));
     }
 
 
