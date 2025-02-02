@@ -45,7 +45,7 @@ public class WeekHandlerTest {
         WeekHandler week = new WeekHandler();
         week.createList();
 
-        assertThat(week.testGetSizeList(), is(7));
+        assertThat(week.getSizeList(), is(7));
     }
             
     @Test

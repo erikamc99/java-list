@@ -28,6 +28,9 @@ public class WeekHandler {
         return dayList;
     }
     
+    public int getSizeList() {
+        return dayList.size();
+    }
 
     
 }
