@@ -32,6 +32,9 @@ public class WeekHandler {
         return dayList.size();
     }
 
+    public void deleteDay(String day) {
+        dayList.remove(day);
+    }
     
 }
 
