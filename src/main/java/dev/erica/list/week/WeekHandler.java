@@ -1,6 +1,7 @@
 package dev.erica.list.week;
   
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class WeekHandler {
@@ -44,5 +45,8 @@ public class WeekHandler {
         return dayList.contains(day);
     }
     
+    public void sortList() {
+        Collections.sort(dayList);
+    }
 }
 
