@@ -9,8 +9,6 @@ import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
@@ -26,11 +24,10 @@ public class WeekHandlerTest {
     @DisplayName("Test para crear la semana")
     public void testCreateList() {
         WeekHandler week = new WeekHandler();
-        days.createList();
+        week.createList();
 
         assertThat(week.getDayList(), containsInAnyOrder(
             "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));
-    
     }
     @Test
     @DisplayName("Test para obtener los días de la semana")
