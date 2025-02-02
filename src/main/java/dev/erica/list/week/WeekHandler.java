@@ -35,6 +35,10 @@ public class WeekHandler {
     public void deleteDay(String day) {
         dayList.remove(day);
     }
+
+    public String getSpecificDay(String day) {
+        return dayList.contains(day) ? day : null;
+    }
     
 }
 

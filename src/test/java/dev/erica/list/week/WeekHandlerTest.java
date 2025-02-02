@@ -11,6 +11,9 @@ import static org.hamcrest.Matchers.is;
 
 import java.util.List;
 
+import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.not;
 import org.junit.Test;
@@ -37,7 +40,7 @@ public class WeekHandlerTest {
         WeekHandler week = new WeekHandler();
         week.createList();
         List<String> days = week.getDayList();
-        assertThat(days, containsInAnyOrder(
+        assertThat(days, contains(
                 "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));         
     }
             
@@ -67,8 +70,7 @@ public class WeekHandlerTest {
         WeekHandler week = new WeekHandler();
         week.createList();
 
-        assertThat(week.getSpecificDay("Thursday"), is(equalTo("Thursday")));
-         
+        assertThat(week.getSpecificDay("Thursday"), is(equalTo("Thursday")));  
     }
 
 
