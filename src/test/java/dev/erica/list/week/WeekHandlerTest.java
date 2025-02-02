@@ -94,13 +94,13 @@ public class WeekHandlerTest {
         assertThat(sortedList, contains("Friday", "Monday", "Saturday", "Sunday", "Thursday", "Tuesday", "Wednesday"));      
     }
 
-    /*
     @Test
     @DisplayName("Test para vaciar la lista")
     public void testCleanList() {
         WeekHandler week = new WeekHandler();
         week.createList();
-            
+        week.cleanList();
+
+        assertThat(week.getDayList(), is(empty()));      
     }
- */
 }
