@@ -51,14 +51,18 @@ public class WeekHandlerTest {
         assertThat(week.testGetSizeList(), is(7));
     }
             
-/*
     @Test
-    @DisplayName("Test para oeliminar un día de la semana")
+    @DisplayName("Test para eliminar un día de la semana")
     public void testDeleteDay() {
         WeekHandler week = new WeekHandler();
-            
+        week.createList();
+        week.deleteDay("Monday");
+
+        assertThat(week.getDayList(), not(hasItem("Monday")));
+        assertThat(week.getSizeList(), is(6));    
     }
 
+/*
     @Test
     @DisplayName("Test para obtener un día específico día de la semana")
     public void testGetSpecificDay() {
