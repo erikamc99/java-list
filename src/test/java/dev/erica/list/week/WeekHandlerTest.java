@@ -81,7 +81,7 @@ public class WeekHandlerTest {
         week.createList();
         
         assertThat(week.dayExists("Sunday"), is(true));
-        asserThat(week.dayExists("Patata"), is(false));
+        assertThat(week.dayExists("Patata"), is(false));
     }
 
     @Test
