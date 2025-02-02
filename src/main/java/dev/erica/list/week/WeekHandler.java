@@ -48,5 +48,9 @@ public class WeekHandler {
     public void sortList() {
         Collections.sort(dayList);
     }
+
+    public void cleanList() {
+        dayList.clear();
+    }
 }
 
