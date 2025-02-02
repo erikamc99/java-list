@@ -83,15 +83,18 @@ public class WeekHandlerTest {
         asserThat(week.dayExists("Patata"), is(false));
     }
 
-/*
     @Test
     @DisplayName("Test para ordenar alfabéticamente la lista")
     public void testSortList() {
         WeekHandler week = new WeekHandler();
         week.createList();
-            
+        week.sortList();
+
+        List<String> sortedList = week.getDayList();
+        assertThat(sortedList, contains("Friday", "Monday", "Saturday", "Sunday", "Thursday", "Tuesday", "Wednesday"));      
     }
 
+    /*
     @Test
     @DisplayName("Test para vaciar la lista")
     public void testCleanList() {
