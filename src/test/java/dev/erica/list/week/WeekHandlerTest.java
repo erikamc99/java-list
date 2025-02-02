@@ -42,14 +42,16 @@ public class WeekHandlerTest {
                 "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));         
     }
             
-/*
     @Test
     @DisplayName("Test para obtener la longitud de la lista")
     public void testGetSizeList() {
         WeekHandler week = new WeekHandler();
-            
-    }
+        week.createList();
 
+        assertThat(week.testGetSizeList(), is(7));
+    }
+            
+/*
     @Test
     @DisplayName("Test para oeliminar un día de la semana")
     public void testDeleteDay() {
